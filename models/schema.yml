@@ -6,7 +6,30 @@ sources:
     tables :
       - name : sales 
         identifier : raw_gz_sales
+        description: sales of Greenweez / we have on row per product_id found in each orders_id
+        columns:
+        - name: orders_id
+          tests:
+          - not_null
+        - name: pdt_id  
+          tests:
+          - not_null
+        tests:
+         - unique:
+            column_name: "orders_id || '-' || pdt_id"  
       - name : product
         identifier : raw_gz_product
+        description: product of Greenweez / one product_id with it's price
+        columns:
+          - name: products_id
+            tests:
+            - not_null
+            - unique
       - name : ship
         identifier : raw_gz_ship
+        description: shipping of Greenweez / one order_ID with its shipping/log cost/fee
+        columns:
+          - name: orders_id
+            tests:
+            - not_null
+            - unique
