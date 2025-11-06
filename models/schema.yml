@@ -242,3 +242,23 @@ models:
          tests:
            - not_null
 
+   - name: int_campaigns_day
+     description: campaign per day
+     columns:
+       - name: date_date
+         description: daily
+         tests:
+           - not_null
+           - unique
+       - name: ad_cost
+         description: daily
+         tests:
+           - not_null
+       - name: impression
+         description: daily
+         tests:
+           - not_null
+       - name: click
+         description: daily
+         tests:
+           - not_null
