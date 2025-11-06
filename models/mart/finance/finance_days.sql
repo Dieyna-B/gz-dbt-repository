@@ -1,3 +1,5 @@
+
+
 SELECT
   date_date,
   COUNT(DISTINCT orders_id) AS total_transactions,

@@ -1,5 +1,7 @@
 version: 2
 
+
+
 sources:
   - name : raw
     schema : gz_raw_data
@@ -131,3 +133,4 @@ models:
          description: sum of Purchase_price
          tests:
            - not_null
+
