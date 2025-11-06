@@ -250,7 +250,7 @@ models:
          tests:
            - not_null
            - unique
-       - name: ad_cost
+       - name: ads_cost
          description: daily
          tests:
            - not_null
